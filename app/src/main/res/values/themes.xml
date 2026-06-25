@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Tema base da aplicação. Usa um tema Material3 sem ActionBar
+         porque a UI é toda Jetpack Compose. -->
+    <style name="Theme.Droninho32" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:statusBarColor">@color/dn_primary_dark</item>
+        <item name="android:windowBackground">@color/dn_background</item>
+    </style>
+</resources>

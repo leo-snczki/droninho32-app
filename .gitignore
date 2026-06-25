@@ -25,3 +25,36 @@ replay_pid*
 
 # Kotlin Gradle plugin data, see https://kotlinlang.org/docs/whatsnew20.html#new-directory-for-kotlin-data-in-gradle-projects
 .kotlin/
+
+# --- Android / Gradle ---
+# Diretórios de build
+/build
+build/
+/app/build
+app/build/
+
+# Gradle
+.gradle/
+
+# Configuração local do SDK (gerada por máquina; nunca versionar)
+local.properties
+
+# Artefactos de build
+*.apk
+*.aab
+*.ap_
+*.dex
+
+# Android Studio / IntelliJ
+.idea/
+*.iml
+captures/
+.externalNativeBuild/
+.cxx/
+
+# Keystores (nunca versionar segredos de assinatura)
+*.keystore
+*.jks
+
+# osmdroid escreve cache de tiles localmente em alguns ambientes
+osmdroid/

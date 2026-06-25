@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Droninho32</string>
+
+    <!-- Genérico -->
+    <string name="action_back">Voltar</string>
+    <string name="action_retry">Tentar novamente</string>
+    <string name="action_cancel">Cancelar</string>
+    <string name="action_ok">OK</string>
+    <string name="loading">A carregar…</string>
+    <string name="error_generic">Ocorreu um erro. Tenta novamente.</string>
+    <string name="error_network">Sem ligação ao servidor. Verifica a rede.</string>
+
+    <!-- Login / Registo -->
+    <string name="login_title">Entrar no Droninho32</string>
+    <string name="login_subtitle">Liga-te ao backend para gerir voos e drones.</string>
+    <string name="login_username">Utilizador</string>
+    <string name="login_email">Email</string>
+    <string name="login_password">Palavra-passe</string>
+    <string name="login_action">Entrar</string>
+    <string name="login_register_action">Criar conta</string>
+    <string name="login_switch_to_register">Não tens conta? Regista-te</string>
+    <string name="login_switch_to_login">Já tens conta? Entra</string>
+    <string name="login_backend_url">URL do backend</string>
+    <string name="login_backend_url_hint">http://10.0.2.2:8000/</string>
+    <string name="login_invalid">Credenciais inválidas.</string>
+    <string name="login_offline_hint">Podes controlar o drone sem ligação ao backend a partir do ecrã de controlo.</string>
+    <string name="login_skip">Continuar sem conta (só controlo do drone)</string>
+
+    <!-- Lista de drones -->
+    <string name="drones_title">Os meus drones</string>
+    <string name="drones_empty">Ainda não tens drones registados.</string>
+    <string name="drones_add">Registar drone</string>
+    <string name="drones_name">Nome</string>
+    <string name="drones_model">Modelo</string>
+    <string name="drones_firmware">Versão do firmware</string>
+    <string name="drones_open_control">Controlar</string>
+    <string name="drones_logout">Terminar sessão</string>
+
+    <!-- Controlo -->
+    <string name="control_title">Controlo do drone</string>
+    <string name="control_connect_hint">Liga o WiFi do telemóvel à rede \"Droninho32\" (palavra-passe: droninho32). Depois controla aqui.</string>
+    <string name="control_connection_ok">Ligado</string>
+    <string name="control_connection_fail">Sem ligação (192.168.4.1)</string>
+    <string name="control_arm">ARMAR</string>
+    <string name="control_disarm">DESARMAR</string>
+    <string name="control_stop">PARAGEM DE EMERGÊNCIA</string>
+    <string name="control_throttle">Acelerador</string>
+    <string name="control_status">Estado</string>
+    <string name="control_armed">Armado</string>
+    <string name="control_disarmed">Desarmado</string>
+    <string name="control_recording">A gravar voo</string>
+    <string name="control_open_map">Mapa</string>
+    <string name="control_safety_warning">Testa SEMPRE sem hélices. Mantém distância.</string>
+    <string name="control_arm_requires_zero">Para armar, larga o acelerador (fica a 0).</string>
+    <string name="control_upload_done">Voo enviado para o backend.</string>
+    <string name="control_upload_skipped">Voo gravado localmente (sem conta/backend).</string>
+    <string name="control_upload_fail">Falha ao enviar o voo para o backend.</string>
+
+    <!-- Controlador / Joysticks -->
+    <string name="control_left_stick">Esquerdo · acelerador / yaw</string>
+    <string name="control_right_stick">Direito · pitch / roll</string>
+    <string name="ctrl_throttle">Acel.</string>
+    <string name="ctrl_yaw">Yaw</string>
+    <string name="ctrl_pitch">Pitch</string>
+    <string name="ctrl_roll">Roll</string>
+    <string name="ctrl_print">Print</string>
+    <string name="ctrl_record_screen">Gravar tela</string>
+    <string name="ctrl_record_screen_stop">Parar gravação</string>
+    <string name="ctrl_calibrate">Calibrar</string>
+    <string name="ctrl_rc_blocked">Comandos bloqueados após paragem de emergência.</string>
+
+    <!-- Calibração -->
+    <string name="cal_title">Calibração dos joysticks</string>
+    <string name="cal_explain">Larga os dois sticks no centro e toca em \"Definir centro atual\". Os valores crus passam a ser o novo zero.</string>
+    <string name="cal_raw">Cru (L x/y · R x/y)</string>
+    <string name="cal_calibrated">Calibrado (T/Y/P/R)</string>
+    <string name="cal_offsets">Offsets (L x/y · R x/y)</string>
+    <string name="cal_set_center">Definir centro atual</string>
+    <string name="cal_reset">Resetar calibração</string>
+    <string name="cal_close">Fechar</string>
+    <string name="cal_set_done">Centro dos joysticks definido.</string>
+    <string name="cal_reset_done">Calibração reposta.</string>
+
+    <!-- Captura / gravação de ecrã -->
+    <string name="shot_saved">Captura guardada em Pictures/Droninho32.</string>
+    <string name="shot_failed">Falha ao guardar a captura.</string>
+    <string name="rec_started">Gravação de tela iniciada.</string>
+    <string name="rec_stopped">Gravação guardada em Movies/Droninho32.</string>
+    <string name="rec_notif_title">Droninho32 — a gravar tela</string>
+    <string name="rec_notif_text">Toca em \"Parar gravação\" na app para terminar.</string>
+    <string name="rec_channel_name">Gravação de tela</string>
+
+    <!-- Telemetria (rótulos) -->
+    <string name="tel_throttle">Acelerador</string>
+    <string name="tel_motors">Motores (FL/FR/RL/RR)</string>
+    <string name="tel_attitude">Atitude (R/P/Y)</string>
+    <string name="tel_battery">Bateria</string>
+    <string name="tel_gps">GPS</string>
+    <string name="tel_gps_fix">Fix</string>
+    <string name="tel_gps_nofix">Sem fix</string>
+    <string name="tel_sats">Satélites</string>
+    <string name="tel_speed">Velocidade</string>
+    <string name="tel_altitude">Altitude</string>
+    <string name="tel_course">Rumo</string>
+    <string name="tel_rssi">Sinal WiFi</string>
+
+    <!-- Mapa -->
+    <string name="map_title">Mapa do voo</string>
+    <string name="map_no_fix">À espera de fix de GPS…</string>
+    <string name="map_drone">Drone</string>
+
+    <!-- Histórico -->
+    <string name="history_title">Histórico de voos</string>
+    <string name="history_empty">Ainda não há voos guardados.</string>
+    <string name="history_open">Abrir</string>
+
+    <!-- Detalhe do voo -->
+    <string name="flight_title">Detalhe do voo</string>
+    <string name="flight_distance">Distância</string>
+    <string name="flight_duration">Duração</string>
+    <string name="flight_max_alt">Altitude máx.</string>
+    <string name="flight_max_speed">Velocidade máx.</string>
+    <string name="flight_avg_speed">Velocidade média</string>
+    <string name="flight_points">Pontos</string>
+    <string name="flight_status">Estado</string>
+    <string name="flight_view_route">Ver rota no mapa</string>
+
+    <!-- Navegação -->
+    <string name="nav_control">Controlo</string>
+    <string name="nav_history">Histórico</string>
+    <string name="nav_drones">Drones</string>
+</resources>

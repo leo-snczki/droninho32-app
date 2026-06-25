@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Foreground vetorial do ícone (drone estilizado, quadricóptero). -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Corpo central -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M54,48m-7,0a7,7 0,1 1,14 0a7,7 0,1 1,-14 0" />
+    <!-- Braços em X -->
+    <path
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="4"
+        android:pathData="M40,34 L68,62 M68,34 L40,62" />
+    <!-- Motores/hélices nas pontas -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M38,32m-6,0a6,6 0,1 1,12 0a6,6 0,1 1,-12 0" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M70,32m-6,0a6,6 0,1 1,12 0a6,6 0,1 1,-12 0" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M38,64m-6,0a6,6 0,1 1,12 0a6,6 0,1 1,-12 0" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M70,64m-6,0a6,6 0,1 1,12 0a6,6 0,1 1,-12 0" />
+</vector>
