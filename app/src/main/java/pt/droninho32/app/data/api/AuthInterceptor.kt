@@ -18,7 +18,13 @@ class AuthInterceptor(
         val request = chain.request()
         val path = request.url.encodedPath
 
-        val skip = path.endsWith("/auth/login/") || path.endsWith("/auth/register/")
+        // Rotas de autenticação pré-sessão (não levam token):
+        //   /auth/login/, /auth/login/verify/, /auth/register/,
+        //   /auth/verify-email/, /auth/resend-verification/
+        val skip = "/auth/login" in path ||
+            path.endsWith("/auth/register/") ||
+            path.endsWith("/auth/verify-email/") ||
+            path.endsWith("/auth/resend-verification/")
         val token = tokenProvider()
 
         if (skip || token.isNullOrBlank()) {

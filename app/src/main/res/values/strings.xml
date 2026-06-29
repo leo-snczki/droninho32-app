@@ -27,6 +27,22 @@
     <string name="login_offline_hint">Podes controlar o drone sem ligação ao backend a partir do ecrã de controlo.</string>
     <string name="login_skip">Continuar sem conta (só controlo do drone)</string>
 
+    <!-- Verificação em duas etapas (2FA) -->
+    <string name="otp_title">Verificação em duas etapas</string>
+    <string name="otp_hint_email">Introduz o código que enviámos para o teu e-mail.</string>
+    <string name="otp_hint_totp">Introduz o código atual da tua app autenticadora.</string>
+    <string name="otp_backup_hint">Sem acesso? Podes usar um dos teus códigos de backup.</string>
+    <string name="otp_code">Código</string>
+    <string name="otp_submit">Entrar</string>
+    <string name="otp_resend">Reenviar código</string>
+
+    <!-- Verificação de e-mail (obrigatória) -->
+    <string name="verify_title">Verificar e-mail</string>
+    <string name="verify_hint">A tua conta precisa de verificação. Introduz o código de 6 dígitos enviado para o teu e-mail.</string>
+    <string name="verify_code">Código de verificação</string>
+    <string name="verify_submit">Verificar</string>
+    <string name="verify_resend">Reenviar código de verificação</string>
+
     <!-- Conta (login opcional) -->
     <string name="account_title">Conta</string>
     <string name="account_logged_in">Sessão iniciada</string>

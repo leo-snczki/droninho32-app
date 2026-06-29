@@ -23,10 +23,50 @@ data class LoginReq(
     val password: String,
 )
 
+/**
+ * Login passo 1 (200): o servidor NÃO devolve token; indica o método de 2FA a
+ * usar (e-mail ou app autenticadora). Se o e-mail não estiver verificado, o
+ * servidor responde 403 (ver tratamento no AuthRepository).
+ */
+@JsonClass(generateAdapter = true)
+data class LoginStep1Res(
+    @Json(name = "otp_required") val otpRequired: Boolean = false,
+    val method: String = "email",
+    val detail: String = "",
+)
+
+/** Login passo 2: credenciais + código (TOTP, OTP por e-mail ou código de backup). */
+@JsonClass(generateAdapter = true)
+data class LoginVerifyReq(
+    val username: String,
+    val password: String,
+    val code: String,
+)
+
 @JsonClass(generateAdapter = true)
 data class LoginRes(
     val token: String,
     val user: User,
+)
+
+/** Confirmação do código de verificação de e-mail. */
+@JsonClass(generateAdapter = true)
+data class VerifyEmailReq(
+    val username: String,
+    val code: String,
+)
+
+/** Reenvio do código de verificação de e-mail. */
+@JsonClass(generateAdapter = true)
+data class ResendReq(
+    val username: String,
+)
+
+/** Resposta simples {detail, email_verified} de vários endpoints de auth. */
+@JsonClass(generateAdapter = true)
+data class SimpleRes(
+    val detail: String = "",
+    @Json(name = "email_verified") val emailVerified: Boolean = false,
 )
 
 @JsonClass(generateAdapter = true)

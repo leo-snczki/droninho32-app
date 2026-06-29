@@ -43,7 +43,10 @@ Esta app respeita o contrato em [`../docs/ARCHITECTURE.md`](../docs/ARCHITECTURE
 
 ## 1. Funcionalidades
 
-- **Login / Registo** no backend (token guardado em DataStore; injetado no header `Authorization: Token <token>`).
+- **Login / Registo** no backend com **autenticação multifator** (igual ao site):
+  - registo → envio de **código de verificação** por e-mail; a conta só entra depois de verificada;
+  - login em **2 passos**: credenciais → **código** (OTP por e-mail, app autenticadora **TOTP** ou **código de backup**), conforme o método escolhido na conta;
+  - token guardado em DataStore (injetado no header `Authorization: Token <token>`).
 - **Lista de drones** (CRUD básico: listar, registar, apagar).
 - **Controlo em tempo real:**
   - estado da ligação ao drone,

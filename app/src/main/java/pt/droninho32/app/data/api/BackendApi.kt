@@ -7,7 +7,12 @@ import pt.droninho32.app.data.dto.FlightReq
 import pt.droninho32.app.data.dto.GeoJson
 import pt.droninho32.app.data.dto.LoginReq
 import pt.droninho32.app.data.dto.LoginRes
+import pt.droninho32.app.data.dto.LoginStep1Res
+import pt.droninho32.app.data.dto.LoginVerifyReq
 import pt.droninho32.app.data.dto.RegisterReq
+import pt.droninho32.app.data.dto.ResendReq
+import pt.droninho32.app.data.dto.SimpleRes
+import pt.droninho32.app.data.dto.VerifyEmailReq
 import pt.droninho32.app.data.dto.Route
 import pt.droninho32.app.data.dto.Stats
 import pt.droninho32.app.data.dto.TelemetryBatch
@@ -34,8 +39,21 @@ interface BackendApi {
     @POST("api/v1/auth/register/")
     suspend fun register(@Body body: RegisterReq): User
 
+    /** Login passo 1: credenciais → método de 2FA (200) ou e-mail por verificar (403). */
     @POST("api/v1/auth/login/")
-    suspend fun login(@Body body: LoginReq): LoginRes
+    suspend fun login(@Body body: LoginReq): Response<LoginStep1Res>
+
+    /** Login passo 2: credenciais + código → token. */
+    @POST("api/v1/auth/login/verify/")
+    suspend fun loginVerify(@Body body: LoginVerifyReq): Response<LoginRes>
+
+    /** Confirma o código de verificação de e-mail. */
+    @POST("api/v1/auth/verify-email/")
+    suspend fun verifyEmail(@Body body: VerifyEmailReq): Response<SimpleRes>
+
+    /** Reenvia o código de verificação de e-mail (resposta genérica). */
+    @POST("api/v1/auth/resend-verification/")
+    suspend fun resendVerification(@Body body: ResendReq): Response<SimpleRes>
 
     @POST("api/v1/auth/logout/")
     suspend fun logout(): Response<Unit>
